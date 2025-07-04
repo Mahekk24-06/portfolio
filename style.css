@@ -1,0 +1,462 @@
+/* General Body Styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f2f8f8, #b0b7f7);
+  color: #333;
+}
+
+/* Basic styling for the section to give it some background and padding */
+#intro-section {
+    background-color: #f8f8ff; /* Light purple background at the top */
+    padding: 50px 20px; /* Adjust padding as needed */
+    margin: 0 auto; /* Center the section if it's within a wider container */
+    max-width: 1200px; /* Limit overall width if desired */
+    box-sizing: border-box;
+    border-bottom: 2px solid #e0e0ff; /* Subtle line at the bottom, matching purple theme */
+}
+
+.intro-content-wrapper {
+    display: flex; /* Use flexbox to align image and text side-by-side */
+    align-items: center; /* Vertically center items */
+    gap: 40px; /* Space between the image and the text */
+    max-width: 900px; /* Max width for the content inside the wrapper */
+    margin: 0 auto; /* Center the content wrapper */
+    padding: 20px; /* Padding inside the content wrapper */
+    background-color: #ffffff; /* White background for the main content area */
+    border-radius: 10px; /* Rounded corners for the content box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow */
+}
+
+.intro-image {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 150px; /* Fixed width for the image container */
+    height: 150px; /* Fixed height for the image container */
+    display: flex; /* Use flex to center the image if it's smaller */
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-image img {
+    max-width: 100%; /* Ensure image scales within its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    border-radius: 50%; /* Make the image circular if desired, based on the input image it's already cartoon-like */
+    object-fit: contain; /* Ensures the whole image is visible */
+}
+
+.intro-text {
+    flex-grow: 1; /* Allow the text content to take up remaining space */
+    color: #555; /* Default text color */
+}
+
+.intro-text h1 {
+    font-size: 2.8em; /* Large, prominent heading */
+    color: #8a2be2; /* Purple color for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+    margin-top: 0; /* Remove default top margin */
+    display: flex; /* Use flex for potential emoji alignment */
+    align-items: center;
+    gap: 10px; /* Space between text and emoji */
+}
+
+.intro-text h1 .wave-emoji {
+    font-size: 0.9em; /* Adjust emoji size relative to heading */
+    display: inline-block; /* Essential for transform to work */
+    animation: wave 2s infinite; /* Apply wave animation */
+    transform-origin: 70% 70%; /* Set pivot point for rotation */
+}
+
+.intro-text p {
+    font-size: 1.1em; /* Readable paragraph text size */
+    line-height: 1.6; /* Good line spacing for readability */
+    color: #444; /* Slightly darker text for readability */
+}
+
+/* Wave animation for the emoji */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); } /* The wave */
+    20% { transform: rotate(-8deg); } /* Bring it back a bit */
+    30% { transform: rotate(14deg); } /* The wave */
+    40% { transform: rotate(-4deg); } /* Bring it back a bit */
+    50% { transform: rotate(10deg); } /* The wave */
+    60% { transform: rotate(0deg); } /* Return to original position */
+    100% { transform: rotate(0deg); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .intro-content-wrapper {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center text on smaller screens */
+        padding: 25px 15px; /* Adjust padding */
+        gap: 25px; /* Adjust gap */
+    }
+
+    .intro-text h1 {
+        font-size: 2.2em; /* Adjust heading size for smaller screens */
+        justify-content: center; /* Center heading and emoji */
+    }
+
+    .intro-text p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    .intro-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Navigation Bar */
+#home {
+  background-color: #7600bc;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile_name {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.contact_info {
+  font-size: 13px;
+  font-style: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact_info img {
+  width: 18px;
+}
+
+/* Menu */
+.topdiv {
+  display: flex;
+  gap: 15px;
+}
+
+.topmenu {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+.topmenu:hover {
+  color: #ffdfff;
+  text-decoration: underline;
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 30px 0 10px;
+  color: #6f5d79;
+}
+
+/* Skills */
+.all_skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 25px;
+}
+
+.skill {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.skill img {
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.skills h6 {
+  font-size: 14px;
+  margin: 6px 0 3px;
+}
+
+.skills p {
+  font-size: 8px;
+  color: #777;
+}
+
+/* Projects */
+.projects-container {
+  padding: 10px 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  margin: 8px auto;
+  padding: 10px 15px;
+  border-left: 5px solid #7600bc;
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.project-card h3 {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.project-card li {
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+/* Recommendations */
+.all_recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.recommendation {
+  width: 150px;
+  background-color: #937999;
+  padding: 15px;
+  border-radius: 10px;
+  font-style: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  font-size: 12px;
+}
+
+.recommendation span {
+  display: block;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #7600bc;
+}
+
+/* Scroll Button */
+.iconbutton {
+  width: 45px;
+  height: 45px;
+  background-color: #7600bc;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+/* Form */
+input, textarea {
+  font-family: inherit;
+  font-size: 12px;
+  margin: 10px 0;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Basic styling for the container and form elements */
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* You might want a min-height for this container if it's the main wrapper */
+    /* min-height: 100vh; */
+    padding: 20px; /* Add some padding around the form */
+}
+ 
+/* Basic styling for the container */
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; Uncomment if this is the main content wrapper */
+    padding: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd; /* Light border around the fieldset */
+    padding: 20px; /* Reduced padding for a smaller box overall */
+    border-radius: 8px; /* Slightly rounded corners */
+    background-color: #fff; /* White background for the form area */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    width: 100%; /* Make fieldset take full width of its flex_center parent */
+    max-width: 400px; /* --- REDUCED MAX-WIDTH HERE for a smaller box --- */
+    box-sizing: border-box; /* Include padding/border in element's total width */
+}
+
+/* --- NEW / MODIFIED CSS for the title --- */
+.header-container {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    padding-bottom: 15px; /* Adds space below the text, inside the header-container */
+    /* border-bottom: 1px solid #eee; Optional: add a subtle line below the title */
+}
+
+.header-container h2 {
+    font-size: 1.6em; /* Adjust font size as desired */
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Remove default h2 margins to control spacing with header-container */
+    padding: 0;
+}
+
+/* Existing form-group and input/textarea styles */
+.form-group {
+    margin-bottom: 15px; /* Slightly reduced space between form groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px; /* Slightly reduced space */
+    font-weight: bold;
+    color: #555;
+    font-size: 1em; /* Slightly smaller label font for smaller box */
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px; /* Slightly reduced padding for inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95em; /* Slightly smaller font for inputs */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px; /* Reduced min-height for textarea */
+}
+
+#recommend_btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px; /* Reduced button padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em; /* Slightly smaller button font */
+    cursor: pointer;
+    width: 100%; /* Make button full width if desired, or remove for auto width */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Reduced space above the button */
+}
+
+#recommend_btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Popup Container - Covers the whole screen */
+.popup-container {
+    position: fixed; /* Stays in place relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+    opacity: 0; /* Start hidden for transition */
+    visibility: hidden; /* Start hidden for accessibility */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+/* Class added by JavaScript to show the popup */
+.popup-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Popup Content Box */
+.popup-content {
+    background-color: #f0e6fa; /* Light purple background matching your image */
+    padding: 25px; /* --- REDUCED PADDING HERE (was 30px) --- */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 300px; /* --- REDUCED MAX-WIDTH HERE (was 350px) --- */
+    width: 90%; /* Responsive width */
+    transform: scale(0.9); /* Start slightly smaller for a subtle animation */
+    transition: transform 0.3s ease; /* Smooth transform for showing */
+}
+
+/* Scale to normal size when shown */
+.popup-container.show .popup-content {
+    transform: scale(1);
+}
+
+/* Checkmark styling */
+.popup-content .checkmark {
+    font-size: 45px; /* --- SLIGHTLY REDUCED FONT SIZE (was 50px) --- */
+    color: #8a2be2; /* Purple color for checkmark */
+    display: block; /* Ensures it takes its own line */
+    margin-bottom: 10px; /* --- REDUCED MARGIN (was 15px) --- */
+    line-height: 1; /* Adjust vertical alignment of the checkmark */
+}
+
+/* Heading styling */
+.popup-content h3 {
+    font-size: 1.3em; /* --- SLIGHTLY REDUCED FONT SIZE (was 1.5em) --- */
+    color: #333;
+    margin-bottom: 20px; /* --- SLIGHTLY REDUCED MARGIN (was 25px) --- */
+    margin-top: 0; /* Remove default top margin */
+}
+
+/* Ok button styling */
+.popup-content #popup-ok-btn {
+    background-color: #8a2be2; /* Purple button */
+    color: white;
+    padding: 10px 25px; /* --- SLIGHTLY REDUCED PADDING (was 12px 30px) --- */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em; /* --- SLIGHTLY REDUCED FONT SIZE (was 1.1em) --- */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.popup-content #popup-ok-btn:hover {
+    background-color: #6a00cd; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Utility class to initially hide the popup (used by JavaScript) */
+.hidden {
+    display: none !important; /* Use !important to ensure it overrides other display properties */
+}
